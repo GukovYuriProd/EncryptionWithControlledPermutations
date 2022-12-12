@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 public class MathTesting {
     public static void main (String[] args) throws IOException {
-        byte[] bitmap = ReadBytes("src/main/resources/output.bmp");
+        byte[] bitmap = ReadBytes("src/main/Photos/output.bmp");
         byte[] targeted_bitmap = new byte[bitmap.length-54];
         System.arraycopy(bitmap, 54, targeted_bitmap, 0, bitmap.length-54);
         float[] ready_vector = new float[targeted_bitmap.length/3];
